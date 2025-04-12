@@ -267,7 +267,9 @@
     .services .service-screen .ser-box {
         width: 45%;
     }
-    
+    .services .service-screen .ser-box p{
+      width:80%;
+    }
     .hww .hwwbox {
         flex-direction: column;
         padding: 0rem;
