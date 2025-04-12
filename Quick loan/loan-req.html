@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loan-req-style.css">
+    <link rel="stylesheet" href="mediaQeuries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Loan Request</title>
+</head>
+<body>
+
+    <div class="loader"></div>
+
+    <section class="nav-sec" id="nav-sec"> 
+        <header>
+            <nav>
+                <div class="logo"><h1>Quick<span>loan</span></h1> </div>
+                <div class="tags">
+                <li><a href="index.html">Home</a><hr></li>
+                <li><a href="services.html">Services</a><hr></li>
+                <li><a href="hww.html">How we work?</a><hr></li>
+                <li><a href="about-us.html">About us</a><hr></li>
+                </div>
+                <div class="btn ">
+                    <a href="#about-us"><button class="btn-t1"> Contact us</button></a>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <section class="mobile-nav">
+        <div class="logo"><h1>Quick<span>loan</span></h1> <i class="fa-solid fa-bars"></i><i class="fa-solid fa-xmark"></i></i> </div>
+        <div class="tags">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="hww.html">How we work?</a></li>
+            <li><a href="about-us.html">About us</a></li>
+        </div>
+
+    </section>
+
+    <section class="head">
+        <div class="side-line"></div>
+        <div class="head-text">
+            <h2>Loan<br><span>Request</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minus iste at ex quo laborum.</p>
+        </div>
+    </section>
+
+    <section class="loan-req">
+        <form id="loanForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+  
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="loanType">Loan Type:</label>
+                <select id="loanType" required>
+                    <option value="">-- Select Loan Type --</option>
+                    <option value="personal">Personal Loan</option>
+                    <option value="auto">Auto Loan</option>
+                    <option value="business">Business Loan</option>
+                </select>
+ 
+            </div>
+            
+            <div class="form-group">
+                <label for="loanAmount">Loan Amount ($):</label>
+                <input type="number" id="loanAmount" min="1" required>
+
+            </div>
+            
+            <div class="form-group">
+                <label for="loanTerm">Loan Term:</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="number" id="loanTerm" min="1" required style="width: 70%;">
+                    <select id="termType">
+                        <option value="months">Months</option>
+                        <option value="years">Years</option>
+                    </select>
+                </div>
+           
+            </div>
+            
+            <div class="form-group">
+                <label for="calculatedRate">Interest Rate (%):</label>
+                <input type="text" id="calculatedRate" readonly>
+                
+            </div>
+            
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" required>
+            </div>
+            
+            <button type="submit">Calculate</button>
+        </form>
+        
+        <div id="results" class="results">
+            <h2>Loan Summary</h2>
+
+            <div id="loanDetails">
+                <h3>Comsumer Information</h3>
+                <p><strong>Name:</strong> <span id="resultName"></span></p>
+                <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="resultPhone"></span></p>
+                <h3>Loan Details</h3>
+                <p><strong>Loan Type:</strong> <span id="resultLoanType"></span></p>
+                <p><strong>Loan Amount:</strong> $<span id="resultAmount"></span></p>
+                <p><strong>Loan Term:</strong> <span id="resultTerm"></span></p>
+                <p><strong>Interest Rate:</strong> <span id="resultRate"></span>%</p>
+                <p><strong>Monthly Payment:</strong> $<span id="monthlyPayment"></span></p>
+                <p><strong>Total Payment:</strong> $<span id="totalPayment"></span></p>
+                <p><strong>Total Interest:</strong> $<span id="totalInterest"></span></p>
+                <p><strong>First Payment Date:</strong> <span id="firstPaymentDate"></span></p>
+                <p><strong>Last Payment Date:</strong> <span id="lastPaymentDate"></span></p>
+   
+            </div>
+            
+            <div class="amortization">
+                <h3>Amortization Schedule</h3>
+                <table id="amortizationTable">
+                    <thead>
+                        <tr>
+                            <th>Payment #</th>
+                            <th>Payment Date</th>
+                            <th>Payment</th>
+                            <th>Interest</th>
+                            <th>Balance</th>
+                            <th>Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="amortizationBody">
+                        <!-- Generated rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <button id="Send-loan-req">Send Loan Request</button>
+            <a href="">go back</a>
+        </div>
+
+    </section>
+
+    <div class="loan-req-sent">
+        <h4>loan request sent!</h4>
+        <a href="index.html"><button>okay!</button></a>
+    </div>
+
+      <!--? footer section -->
+ <section class="footer">
+    <div class="foot1">
+        <h5>Quick<span>loan</span></h5>
+        <p>Our mission is to empower individuals and 
+            businesses by providing them with the
+            financial resources they
+            need to achieve their goals.</p><br>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+        
+    </div>
+    <div class="foot2">
+        <h5>Our Services</h5><hr>
+        <a href="">Personal Loan</a>
+        <a href="">Business Laon</a>
+        <a href="">Auto Loan</a>
+    </div>
+    <div class="foot3">
+        <h5>Contact us</h5><hr>
+        <div class="">
+            <i class="fa-solid fa-square-phone"></i>
+            <p>+9 999 9999</p>
+        </div>
+        <div class="">
+            <i class="fa-solid fa-envelope"></i>
+            <p>xyz@gmail.com</p>
+        </div>
+        <div class="">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>
+                Address line-1 <br>
+                Address line-2,<br>
+                city, state-pin code.
+            </p>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
