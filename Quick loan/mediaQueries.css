@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* * extra stuff */
+
+/* HTML: <div class="loader"></div> */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c3);
+  transition: opacity 0.75s, visibility 0.75s;
+  z-index: 1000;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid var(--c3);
+  border-top-color: var(--c1);
+  border-bottom-color: var(--c1) ;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+:root{
+    --c1: #049940;
+    --c2: #F0F1F3;
+    --c3: #ffffff; 
+    --c4: #C6D8E4;
+    --c5: #193c45;
+    --c6: #333;
+    /** 2A6877 */
+    /** 054535 */
+}
+
+
+.mobile-nav{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .hero .hero-screen .hero-left h1 {
+        font-size: 3.5rem;
+        width: 80%;
+    }
+    
+    .hww .hwwbox {
+        gap: 5rem;
+    }
+    
+    .services .service-screen .ser-box {
+        width: 22%;
+
+    }
+        .services .service-screen {
+        gap: 1rem;
+    }
+    
+    .services .service-screen .ser-box {
+        width: 22%;
+        padding: 1.5rem 1rem;
+    }
+      /* Form */
+    #loanForm {
+      padding: 1.5rem;
+    }
+    
+    .form-group input, .form-group select {
+      width: 70%;
+    }
+    .footer {
+        padding: 4rem 2rem;
+    }
+}
+
+/* Medium Screens (Tablets and Small Laptops) */
+@media screen and (max-width: 990px) {
+    .nav-sec header nav {
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav-sec header nav .tags {
+        gap: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .hero .hero-screen {
+        padding: 0rem 3rem;
+    }
+    
+    .hero .hero-screen .hero-left h1 {
+        font-size: 3rem;
+        width: 90%;
+    }
+    
+    .hero .hero-screen .hero-right img {
+        width: 45vw;
+    }
+    
+    .services .service-screen {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    .services {
+        padding: 3rem 1rem;
+    }
+    
+    .services .service-screen .ser-box {
+        width: 40%;
+        margin: 0.5rem;
+    }
+    
+    .hww .hwwbox {
+        gap: 3rem;
+        margin: 0rem 2rem;
+    }
+    
+    .hww .hwwbox .hww-text h3 {
+        font-size: 2.2rem;
+    }
+    
+    .about-us {
+        padding: 2rem;
+        gap: 2rem;
+    }
+    /* Form */
+    #loanForm {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 0.5rem;
+    }
+    
+    #loanForm > button {
+      grid-column: 1 / span 2;
+      grid-row: 5;
+      width: 50%;
+      margin: 1rem auto;
+    }
+    
+    .form-group input, .form-group select {
+      width: 80%;
+    }
+    
+    .footer {
+        padding: 4rem 3rem;
+    }
+}
+
+/* Small Screens (Tablets and Large Phones) */
+@media screen and (max-width: 760px) {
+    .nav-sec{
+        display: none;
+    }
+    .mobile-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 4rem;
+        transition: height 0.5s ease-in-out;
+    }
+    .mobile-nav .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        font-size: 1.2rem;
+    }
+    .mobile-nav span{
+        color: var(--c1);
+    }
+    .mobile-nav i {
+        font-size: 1.5rem;
+        color: var(--c5);
+        padding: 1rem;
+    }
+    .mobile-nav .fa-xmark{
+        display:none;
+    }
+    .mobile-nav .tags{
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: 15rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: var(--c3);
+        font-size: 1.2rem; 
+        background-color: var(--c2);
+        animation: appear-t-to-b 0.5s ease-in-out;
+    }
+    .mobile-nav .tags a{
+        color: var(--c5);
+        text-decoration: none;
+    }
+    .mobile-nav .tags li{
+        list-style: none;
+    }
+    .head .head-text h2 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+    
+    .head .head-text p{
+        font-size: 1rem;
+    }
+
+
+    .hero .hero-screen {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .hero .hero-screen .hero-left, 
+    .hero .hero-screen .hero-right {
+        width: 100%;
+    }
+    
+    .hero .hero-screen .hero-left h1 {
+        width: 100%;
+        font-size: 2.8rem;
+    }
+    
+    .hero .hero-screen .hero-left p {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    
+    .hero .hero-screen .hero-right img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .services {
+        height: auto;
+        padding: 3rem 1rem;
+    }
+    
+    .services .service-screen {
+        flex-wrap: wrap;
+    }
+    
+    .services .service-screen .ser-box {
+        width: 45%;
+    }
+    
+    .hww .hwwbox {
+        flex-direction: column;
+        padding: 0rem;
+    }
+    
+    .hww .hwwbox img {
+        width: 90%;
+        order:1;
+    }
+    
+    .hww .hwwbox .hww-text {
+        width: 100%;
+        order: 2;
+    }
+    .hww .hwwbox .hww-text p{
+        text-align: center;        
+    }
+   
+   
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-us .abt-us-l,
+    .about-us .abt-us-r {
+        width: 90%;
+        text-align: center;
+    }
+    
+    .about-us .abt-us-l img {
+        margin: 1.5rem auto;
+        width: 80%;
+    }
+     #loanForm {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fill, 1fr);
+      padding: 1rem;
+    }
+    
+    #loanForm > button {
+      grid-column: 1;
+      grid-row: 10;
+      width: 70%;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group input, .form-group select {
+      width: 100%;
+      background-color: var(--c3);
+      box-shadow: 5px 5px 10px #ccc;
+    }
+    
+    /* Results */
+    .results {
+      width: 90vw;
+      margin: 2rem auto;
+      left: 5%;
+    }
+    
+    .footer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .footer .foot1 i{
+        margin:0rem 0.5rem;
+        font-size: 1.5rem;
+    }
+    .footer .foot2,
+    .footer .foot3 {
+        width: 30%; 
+        margin: 1rem;
+    }
+    .footer .foot1 {
+        font-size: 1rem;
+        width: 90%;
+    }
+}
+
+
+/* Extra Small Screens (Mobile Phones) */
+@media screen and (max-width: 570px) {
+    
+    
+    .btn-t1, .btn-t2 {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .hero .hero-screen .hero-left h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero .hero-screen .hero-left p {
+        font-size: 1rem;
+    }
+    
+    .services h2 {
+        font-size: 1.8rem;
+    }
+    
+    .services .service-screen .ser-box {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .hww .hww-top h2 {
+        font-size: 1.8rem;
+    }
+     
+
+    .hww .hwwbox .hww-text h3 {
+        font-size: 1.8rem;
+    }
+    
+    .hww .hwwbox .hww-text p {
+        font-size: 1.1rem;
+    }
+    
+    .about-us .abt-us-l h3 {
+        font-size: 1.8rem;
+    }
+    
+    .about-us .abt-us-l p {
+        font-size: 1.1rem;
+    }
+    
+    .about-us .abt-us-r {
+        width: 100%;
+    }
+     /* Loan request & results */
+    .loan-req-sent {
+      width: 90%;
+      padding: 1.5rem;
+    }
+    
+    .loan-req-sent h4 {
+      font-size: 1.5rem;
+    }
+    
+    .loan-req-sent button {
+      font-size: 1.2rem;
+    }
+    
+    /* Table */
+    table {
+      font-size: 0.8rem;
+    }
+    
+    th, td {
+      padding: 6px;
+    }
+    
+    .footer {
+        padding: 3rem 1.5rem;
+    }
+    
+    .footer .foot2,
+    .footer .foot3 {
+        width: 50%;
+        margin: 1rem 0;
+        text-align: left;
+    }
+    
+    .footer .foot1 p {
+        width: 100%;
+    }
+    
+    .get-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        }
+}
+
+/* For very small mobile devices */
+@media screen and (max-width: 375px) {
+    .hero .hero-screen .hero-left h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hww .hww-top h2,
+    .about-us .abt-us-l h3 {
+        font-size: 1.5rem;
+    }
+    
+    .hww .hwwbox .hww-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .hww .hwwbox .hww-text p,
+    .about-us .abt-us-l p {
+        font-size: 1rem;
+    }
+    
+    /* Form */
+    #loanForm {
+      padding: 0.8rem;
+    }
+    
+    .form-group label {
+      font-size: 0.9rem;
+    }
+    
+    .form-group input, .form-group select {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+    }
+    
+    #loanForm > button {
+      width: 90%;
+      font-size: 0.9rem;
+    }
+    
+    /* Results */
+    .results {
+      padding: 10px;
+      width: 95vw;
+      left: 2.5%;
+      margin: 1rem auto;
+    }
+    
+    .results h2 {
+      font-size: 1.3rem;
+    }
+}
+
+
+@keyframes appear-l-to-r{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes scale-up{
+    from{
+        transform: scale(0.6);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes appear-t-to-b{
+    from{
+        transform: translateY(-100%);
+        transition: height 0.5s ease-in-out;
+
+    }
+    to{
+        transform: translateY(0%);
+        transition: height 0.5s ease-in-out;
+
+        
+    }
+}

@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --c1: #049940;
+    --c2: #F0F1F3;
+    --c3: #ffffff; 
+    --c4: #C6D8E4;
+    --c5: #193c45;
+    --c6: #333;
+    /** 2A6877 */
+    /** 054535 */
+}
+.btn-t1{
+    background-color: var(--c5);
+    font-size: 1rem;
+    color: var(--c3);
+    border: 2px solid var(--c5);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5rem;
+}
+
+.btn-t1:hover{
+    background-color: transparent;
+    color: var(--c5);
+}
+.btn-t2{
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--c5);
+    border: 2px solid var(--c5);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5rem;
+}
+
+.btn-t2:hover{
+    background-color: var(--c5);
+    color: var(--c3);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: raleway, serif;
+}
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: roboto ;
+    transition: all 300ms ease-in-out;
+    scroll-behavior: smooth;
+}
+/* ? nav bar section */
+
+.nav-sec header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.nav-sec header nav .logo h1 {
+    font-size: 2rem;
+    color: #333;
+}
+.nav-sec header nav .logo h1 span {
+    color:var(--c1) ;
+}
+.btn {
+    visibility: hidden;
+}
+.nav-sec header nav .tags{
+    display: flex;
+    font-size: 1.2rem;
+    gap: 1.5rem;
+    list-style-type: none;
+    color: #1c1c1ce9;
+}
+.nav-sec header nav .tags li:hover{
+    transform: scale(1.1);
+}
+.nav-sec header nav .tags li hr{
+    transition:all 0.5s ease-out ;
+    width: 0px;
+   visibility: hidden;
+}
+.nav-sec header nav .tags li:hover hr{
+    width: 100%;
+    border: 1px solid var(--c5);
+    visibility: visible;
+}
+.nav-sec header nav .tags a{
+    text-decoration: none;   
+    color: var(--c6);
+}
+
+.head{
+
+
+    margin: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    gap: 2rem;
+    
+}
+.head .head-text h2{
+    font-size: 3rem;
+    text-align: left;
+    font-weight: 600;
+    animation: appear-l-to-r 1s;
+    line-height: 3rem;
+}
+.head .head-text h2 span{
+    color: var(--c1);
+}
+.head .head-text p{
+    text-align: left;
+    font-size: 1rem;
+    color: var(--c6);
+    animation: appear-l-to-r 1.5s;
+}
+.head .side-line{
+    height: 100%;
+    width: 5rem;
+    background-color: var(--c3);
+    border-right: 3px solid var(--c1);
+    animation: side-line-animation 250ms ;
+    z-index: 12;
+}
+
+.services{
+    background: rgb(80,172,151);
+    background: linear-gradient(90deg, rgba(80, 172, 151, 0.405) 0%, rgba(255,255,255,1) 100%);
+    height: 60vh;
+    display: flex;
+    padding: 2rem ;
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.services h2{
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+
+}
+.services .service-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 2rem;
+}
+.services .service-screen .ser-box{
+    width: 20%;
+    height: 17rem;
+    margin: 1rem;
+    background-color: #ffffff1e;
+    border: 3px solid #8f8e8e5f;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    transition: all 300ms ease;
+    animation: fade-in 2s;
+
+}
+.services .service-screen .ser-box:hover{
+    background-color: #89898920;
+    flex-grow: 0.1;
+    transition: all 0.5s;
+}
+.ser-box h3,.ser-box p {
+    font-family: raleway;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+}
+.ser-box p{
+    font-size:1rem ;
+    color: #414141eb;
+}
+.services .service-screen .ser-box img{
+    width: 4rem;
+}
+.services .service-screen .ser-box button{
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: var(--c5);
+    border: 1px solid var(--c5);
+    border-radius: 2rem ;
+    font-size: 1rem;
+}
+.services .service-screen .ser-box button:hover{
+    background-color: var(--c5);
+    color: var(--c3);
+}
+
+
+
+.footer{
+    background-image: url(./assets/footer-bg6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.footer .foot1{
+    font-size: 1.5rem;
+    color: var(--c3);
+    margin: 2rem;
+}
+.footer .foot1 i{
+    margin:0.2rem;
+}
+.footer .foot1 p{
+    color: #b4b4b4;
+    width: 50%;
+    font-size: 1rem;    
+}
+.footer .foot1 h5{
+    font-size: 2rem;
+}
+.footer .foot1 h5 span{
+    color: var(--c1);
+}
+.footer .foot2,
+.footer .foot3{
+    width: 20%;
+    font-size: 1.5rem;
+    color: var(--c3);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer .foot2 a{
+    color: var(--c3);
+    text-decoration: none;
+    font-size: 1rem;
+
+}
+.footer hr{
+    width: 30%;
+}
+.footer .foot3 > div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.footer .foot3 > div > i{
+    font-size:1.2rem ;
+}
+
+
+@keyframes side-line-animation{
+    from{
+        height: 0px;
+    }
+    to{
+        height: 100%;
+    }
+
+}
+@keyframes appear-l-to-r{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
